@@ -1,0 +1,21 @@
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--seed', type=int, default=0)
+parser.add_argument('--device', type=int, default=0)
+parser.add_argument('--p', type=int, default=50)
+parser.add_argument('--T', type=int, default=10000)
+parser.add_argument('--sigma', type=float, default=1.0)
+parser.add_argument('--mu', type=float, default=1.0)
+parser.add_argument('--lamda', type=float, default=1.0)
+parser.add_argument('--N', type=int, default=5)
+parser.add_argument('--method', type=str, default='')
+parser.add_argument('--lag', type=int, default=1000)
+parser.add_argument('--model', type=str, default='ising')
+parser.add_argument('--m', type=int, default=1)
+parser.add_argument('--L', type=int, default=1000)
+parser.add_argument('--K', type=int, default=10)
+parser.add_argument('--ess_ratio', type=float, default=0.5)
+parser.add_argument('--g_func', type=str, default=None)
+
+cmd_args = parser.parse_args()
