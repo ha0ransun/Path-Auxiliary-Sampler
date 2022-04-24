@@ -34,7 +34,7 @@ def main(args):
     else:
         device = torch.device("cuda:%d" % args.gpu if torch.cuda.is_available() else "cpu")
 
-    temps = ['bg-1', 'bg-2', 'hb-10-1', 'gwg-1', 'gwg-3', 'gwg-5', 'pafs-3', 'pafs-5']
+    temps = ['bg-1', 'bg-2', 'hb-10-1', 'gwg-1', 'gwg-3', 'pafs-3']
 
     hops, times, energys, traces, ess = {}, {}, {}, {}, {}
     model = Ising(p=args.p, device=device)

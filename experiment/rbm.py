@@ -95,7 +95,7 @@ def main(args):
     chains = {}
     chain = []
 
-    temps = ['bg-1', 'bg-2', 'hb-10-1', 'gwg-1', 'gwg-3', 'gwg-5', 'pafs-3', 'pafs-5']
+    temps = ['bg-1', 'bg-2', 'hb-10-1', 'gwg-1', 'gwg-3', 'pafs-3']
     for temp in temps:
         sampler = get_sampler(args, sampler=temp, data_dim=784)
 

@@ -32,10 +32,10 @@ def main(args):
     else:
         device = torch.device("cuda:%d" % args.gpu if torch.cuda.is_available() else "cpu")
 
-    temps = ['bg-1', 'bg-2', 'hb-10-1', 'gwg-1', 'gwg-3', 'gwg-5', 'pafs-3', 'pafs-5']
+    temps = ['bg-1', 'bg-2', 'hb-10-1', 'gwg-1', 'gwg-3', 'pafs-3']
 
     hops, times, energys, errors, ess = {}, {}, {}, {}, {}
-    model = FHMM(L=args.L, device=device)
+    model = FHMM(L=args.L, alpha=args.alpha, beta=args.beta, sigma=args.beta, device=device)
     m = 2 * args.L
     for temp in temps:
         sampler = get_sampler(args, sampler=temp, data_dim=args.n_visible)
